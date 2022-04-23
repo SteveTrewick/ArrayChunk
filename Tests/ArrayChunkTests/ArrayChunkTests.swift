@@ -2,10 +2,9 @@ import XCTest
 @testable import ArrayChunk
 
 final class ArrayChunkTests: XCTestCase {
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(ArrayChunk().text, "Hello, World!")
-    }
+  
+  func testChunk() throws {
+    let input = ["a", "b", "c", "d", "e"]
+    XCTAssert(input.chunks(of: 3) == [["a", "b", "c"], ["d", "e"]])
+  }
 }
